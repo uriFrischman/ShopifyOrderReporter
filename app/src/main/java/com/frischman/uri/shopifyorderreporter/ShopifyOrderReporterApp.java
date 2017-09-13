@@ -1,25 +1,24 @@
 package com.frischman.uri.shopifyorderreporter;
 
 import android.app.Application;
-
-import com.frischman.uri.shopifyorderreporter.util.StringUtil;
+import android.content.Context;
 
 
 public class ShopifyOrderReporterApp extends Application {
 
-    private static StringUtil mStringUtil;
+    private static Context mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        initAppStringUtil();
+        initAppContext();
     }
 
-    private void initAppStringUtil() {
-        mStringUtil = new StringUtil(this);
+    private void initAppContext() {
+        ShopifyOrderReporterApp.mContext = getApplicationContext();
     }
 
-    public static StringUtil getAppStringUtil() {
-        return mStringUtil;
+    public static Context getAppContext() {
+        return ShopifyOrderReporterApp.mContext;
     }
 }
