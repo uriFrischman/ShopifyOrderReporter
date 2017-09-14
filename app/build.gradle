@@ -41,4 +41,6 @@ dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
     //CircleImageView
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    //Ticker
+    compile 'com.robinhood.ticker:ticker:1.2.0'
 }
