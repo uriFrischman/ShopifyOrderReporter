@@ -36,16 +36,7 @@
             android:id="@+id/splashParagraph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="
-Hey, its Uri.
-\n\n
-\tJust want to thank you again for hosting me at the Toronto Intern tour! It was great hearing from the panel and meeting lots of cool and interesting people.
-\n\n
-\tPlease click on the Shopify button below to get to the main app page. I hope you like it!
-\n\n
-\tLooking forward to hearing back from you soon!
-\n\n
-\tUri Frischman"
+            android:text="@string/splash_page_letter"
             />
     </RelativeLayout>
 

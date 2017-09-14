@@ -1,19 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.frischman.uri.shopifyorderreporter.MainActivity">
+    android:background="@color/shopify_green"
+    android:padding="20sp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/shopify_icon"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mainContentContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_centerInParent="true">
 
-</android.support.constraint.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/napoleanContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/napoleanTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/amount_spent_title"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"/>
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/napoleanTicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/napoleanTitle"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bagsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/napoleanContainer"
+            android:layout_marginTop="10sp">
+
+            <TextView
+                android:id="@+id/bagsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bags_sold_title"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"/>
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/bagsAmountTicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bagsTitle"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/generateReportButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bagsContainer"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/click_effect"
+            android:focusableInTouchMode="true"
+            android:text="@string/button_generate_report"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mainContentContainer">
+
+        <TextView
+            android:id="@+id/resetText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/button_reset_report"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
