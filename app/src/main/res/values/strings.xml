@@ -1,3 +1,21 @@
 <resources>
+    <!--App Related Strings-->
     <string name="app_name">ShopifyOrderReporter</string>
+
+    <!--List of Orders URL-->
+    <string name="list_of_orders_url"><![CDATA[https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6]]></string>
+
+    <!--List of Orders Oject Keys-->
+    <string name="list_of_orders_key_orders">orders</string>
+
+    <!--Order Object Keys-->
+    <string name="order_key_customer">customer</string>
+    <string name="order_key_first_name">first_name</string>
+    <string name="order_key_last_name">last_name</string>
+    <string name="order_key_line_items">line_items</string>
+    <string name="order_key_total_price">total_price</string>
+
+    <!--Line Item Object Keys-->
+    <string name="line_item_key_title">title</string>
+    <string name="line_item_key_quantity">quantity</string>
 </resources>
