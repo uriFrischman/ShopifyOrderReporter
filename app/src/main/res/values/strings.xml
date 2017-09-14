@@ -18,4 +18,15 @@
     <!--Line Item Object Keys-->
     <string name="line_item_key_title">title</string>
     <string name="line_item_key_quantity">quantity</string>
+
+    <!--Button Strings-->
+    <string name="button_reset_report">Reset Report</string>
+    <string name="button_generate_report">Generate Report</string>
+
+    <!--Title Strings-->
+    <string name="bags_sold_title">Total Quantity of Awesome Bags Sold:</string>
+    <string name="amount_spent_title">Total Amount of CAD Napolean Batz Spent:</string>
+
+    <!--Splash Page Letter-->
+    <string name="splash_page_letter">Hey,    \n\n\tI would just like to thank you again for hosting me at the Toronto Intern tour! It was great hearing from the panel and meeting lots of cool and interesting people.   \n\n\tPlease click on the Shopify button below to get to the main app page. I hope you like it!    \n\n\tLooking forward to hearing back from you soon!    \n\n\tUri Frischman</string>
 </resources>
