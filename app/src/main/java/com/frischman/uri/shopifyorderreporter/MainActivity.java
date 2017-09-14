@@ -31,4 +31,40 @@ public class MainActivity extends AppCompatActivity {
 
         resetTickers();
     }
+
+    private static class FetchAmount extends AsyncTaskLoader<Double> {
+
+        public FetchAmount(Context context) {
+            super(context);
+        }
+
+        @Override
+        public Double loadInBackground() {
+            return getAmountCustomerSpentFromOrders(getAllOrdersFromRequest(StringUtil.getString(list_of_orders_url)), "Napoleon Batz");
+        }
+
+        @Override
+        public void deliverResult(Double data) {
+            super.deliverResult(data);
+        }
+    }
+
+    private static class FetchBagsAmount extends AsyncTaskLoader<Integer> {
+
+        public FetchBagsAmount(Context context) {
+            super(context);
+        }
+
+        @Override
+        public Integer loadInBackground() {
+            return getTotalLineItemSoldFromOrders(getAllOrdersFromRequest(StringUtil.getString(list_of_orders_url)), "Awesome Bronze Bag");
+        }
+
+
+        @Override
+        public void deliverResult(Integer data) {
+            super.deliverResult(data);
+        }
+    }
+
 }
