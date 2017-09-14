@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="shopify_green">#B0D05B</color>
+    <color name="shopify_green_darker">#728e2a</color>
+
 </resources>
