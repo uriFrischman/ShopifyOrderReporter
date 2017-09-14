@@ -15,6 +15,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mButtonGenerateReport = (Button) findViewById(R.id.generateReportButton);
         mResetText = (TextView) findViewById(R.id.resetText);
+        LoaderManager.LoaderCallbacks<Double> amountLoader = new LoaderManager.LoaderCallbacks<Double>() {
+            @Override
+            public Loader<Double> onCreateLoader(int id, Bundle args) {
+                return new FetchAmount(mContext);
+            }
+
+            @Override
+            public void onLoadFinished(Loader<Double> loader, Double data) {
+                mNapoleanTicker.setText("$" + data);
+            }
+
+            @Override
+            public void onLoaderReset(Loader<Double> loader) {
+
+            }
+        };
+
+        LoaderManager.LoaderCallbacks<Integer> bagsLoader = new LoaderManager.LoaderCallbacks<Integer>() {
+            @Override
+            public Loader<Integer> onCreateLoader(int id, Bundle args) {
+                return new FetchBagsAmount(mContext);
+            }
+
+            @Override
+            public void onLoadFinished(Loader<Integer> loader, Integer data) {
+                mBagsTicker.setText(String.valueOf(data));
+            }
+
+            @Override
+            public void onLoaderReset(Loader<Integer> loader) {
+
+            }
+        };
     private void resetTickers() {
         mBagsTicker.setText("0", true);
         mNapoleanTicker.setText("$0000.00", true);
