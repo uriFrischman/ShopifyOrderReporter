@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/headShotContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/headShot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/head_shot"
+            app:civ_border_color="@android:color/black"
+            app:civ_border_width="3sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/splashParagraphContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp">
+
+        <TextView
+            android:padding="20sp"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/splashParagraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+Hey, its Uri.
+\n\n
+\tJust want to thank you again for hosting me at the Toronto Intern tour! It was great hearing from the panel and meeting lots of cool and interesting people.
+\n\n
+\tPlease click on the Shopify button below to get to the main app page. I hope you like it!
+\n\n
+\tLooking forward to hearing back from you soon!
+\n\n
+\tUri Frischman"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/iconContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/shopifyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:src="@drawable/shopify_logo"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+    <!--<Button-->
+        <!--android:id="@+id/buttonGoNext"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="30sp"-->
+        <!--android:text="Go To Next"/>-->
+
+
+
+</LinearLayout>
