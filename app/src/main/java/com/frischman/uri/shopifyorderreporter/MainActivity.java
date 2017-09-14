@@ -48,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+
+        mButtonGenerateReport.setOnClickListener(v -> {
+            getSupportLoaderManager().initLoader(NAPOLEAN_LOADER, null, amountLoader).forceLoad();
+            getSupportLoaderManager().initLoader(BAGS_TICKER, null, bagsLoader).forceLoad();
+        });
+
+        mResetText.setOnClickListener(v -> {
+            resetTickers();
+        });
+    }
     private void resetTickers() {
         mBagsTicker.setText("0", true);
         mNapoleanTicker.setText("$0000.00", true);
