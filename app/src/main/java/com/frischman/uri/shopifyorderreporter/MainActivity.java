@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final int NAPOLEAN_LOADER = 1;
+    private final int BAGS_TICKER = 2;
+    private Context mContext = this;
     private TickerView mNapoleanTicker;
     private TickerView mBagsTicker;
     private Button mButtonGenerateReport;
@@ -15,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mButtonGenerateReport = (Button) findViewById(R.id.generateReportButton);
         mResetText = (TextView) findViewById(R.id.resetText);
+
+        initTickers();
+
         LoaderManager.LoaderCallbacks<Double> amountLoader = new LoaderManager.LoaderCallbacks<Double>() {
             @Override
             public Loader<Double> onCreateLoader(int id, Bundle args) {
